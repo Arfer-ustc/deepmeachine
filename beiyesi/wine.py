@@ -64,6 +64,7 @@ def summarizeByClass(dataset):
     summaries = {}
     for classValue, instances in separated.items():
         summaries[classValue] = summarize(instances)
+    print("summaries:",summaries)
     return summaries
 
 #给定来自训练数据中已知属性的均值和标准差，可以使用高斯函数来评估一个给定的属性值 的概率
