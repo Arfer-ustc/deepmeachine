@@ -88,7 +88,7 @@ def createPlot(inTree):
     plotTree.yOff = 1.0
     plotTree(inTree, (0.5, 1.0), '')
 #C4.5决策树
-def C45_Tree(inTree):
+def C45_Tree(inTree,treename):
     fig = plt.figure(2, facecolor='white')
     fig.clf()
     axprops = dict(xticks=[], yticks=[])
@@ -98,5 +98,5 @@ def C45_Tree(inTree):
     plotTree.xOff = -0.5 / plotTree.totalw
     plotTree.yOff = 1.0
     plotTree(inTree, (0.5, 1.0), '')
-    plt.title("C4.5决策树",fontsize=12,color='red')
+    plt.title(treename,fontsize=12,color='red')
     plt.show()

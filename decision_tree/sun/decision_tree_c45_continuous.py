@@ -441,7 +441,7 @@ def main():
     print(myTree)
     storeTree(myTree, 'myTree_continues.pickle')
     #画树
-    C45_Tree(myTree)
+    C45_Tree(myTree,'c4.5')
     y_pred = predict(myTree, iris.feature_names, data_test[:, :-1])
     acc = accurary(data_test[:, -1], y_pred)
     print("Accurary: ", acc)
