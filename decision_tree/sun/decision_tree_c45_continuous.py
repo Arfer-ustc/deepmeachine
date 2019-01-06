@@ -6,6 +6,9 @@ from pylab import *
 from sklearn.datasets import load_iris
 import pickle
 
+from decision_tree.sun.plotter import C45_Tree
+
+
 def calcShannonEnt(dataSet):
 
     # 计算出数据集的总数
@@ -437,7 +440,8 @@ def main():
     myTree = createTree(dataSet=data_train, labels=features)
     print(myTree)
     storeTree(myTree, 'myTree_continues.pickle')
-
+    #画树
+    C45_Tree(myTree)
     y_pred = predict(myTree, iris.feature_names, data_test[:, :-1])
     acc = accurary(data_test[:, -1], y_pred)
     print("Accurary: ", acc)
